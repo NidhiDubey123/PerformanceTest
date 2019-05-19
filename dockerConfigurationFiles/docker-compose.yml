@@ -21,8 +21,8 @@ services:
     command: ./opt/apache-jmeter-5.1.1/bin/jmeter.sh -n -Jclient.rmi.localport=7000 -Jserver.rmi.localport=60000 -Jserver.rmi.ssl.disable=true
     ports:
     - "7000:7000"
-    
-    
+    command: ./opt/apache-jmeter-5.1.1/bin/jmeter.sh  -n -X -Jclient.rmi.localport=7000 -Jserver.rmi.ssl.disable=true -R jmeter-lg1,jmeter-lg2  -t /GitHubJmeterTest.jmx -l /result.jtl -j /jmeter.log
+
 
 
         
